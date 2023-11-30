@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(/assets/images/bird.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#container{
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5em;
+    border-radius: 25px;
+    margin: 1em;
+}
+
+
+#meteo{
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    max-width: 150px;
+}
+
+#degre{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+#nomville{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+#humidite{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#vent{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
