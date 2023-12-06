@@ -51,4 +51,3 @@ fetch("../assets/json/conf.json")
             }
     });
 });
-// refresh tte les heures
