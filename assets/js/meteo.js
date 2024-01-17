@@ -4,6 +4,7 @@ let ville = document.getElementById('nomville');
 let humidite = document.getElementById('humidite');
 let vent = document.getElementById('vent');
 
+
 const listeSoleil = [113];
 const listeNuage = [116, 119, 122];
 const listePluie = [176, 293, 296, 299, 302, 305, 308, 311, 353, 356, 359, 362, 365];
@@ -13,8 +14,9 @@ const listeTonnerre = [200, 386, 389, 392, 395];
 
 var access_key;
 var city;
-
-fetch("../assets/json/conf.json")
+var url = document.URL;
+console.log(url)
+fetch('assets/json/conf.json')
     .then(response=>response.json())
     .then(info=>{
         city = info.nomVille;
@@ -37,17 +39,17 @@ fetch("../assets/json/conf.json")
             };
             
             if (parcourirListe(listeSoleil)===true){
-                meteo.src="/assets/images/soleil.png"
+                meteo.src="assets/images/soleil.png"
             } else if(parcourirListe(listeTonnerre)===true){
-                meteo.src="/assets/images/tonnerre.png"
+                meteo.src="assets/images/tonnerre.png"
             } else if(parcourirListe(listePluie)===true){
-                meteo.src="/assets/images/pluie.png";
+                meteo.src="assets/images/pluie.png";
             } else if(parcourirListe(listeNuage)===true){
-                meteo.src="/assets/images/nuage.png";
+                meteo.src="assets/images/nuage.png";
             } else if(parcourirListe(listeNeige)===true){
-                meteo.src="/assets/images/neige.png";
+                meteo.src="assets/images/neige.png";
             } else if (parcourirListe(listeBrouillard)===true){
-                meteo.src="/assets/images/brouillard.png";
+                meteo.src="assets/images/brouillard.png";
             }
     });
 });
